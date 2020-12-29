@@ -12,6 +12,8 @@ def OS():
     if OS_select == "1":
         print("The phone will restart in bootloader mode")
         subprocess.call(["adb.exe", "reboot", "bootloader"])
+        input("Official webpage for TWRP download, REMEMBER TO SELECT YOUR DEVICE OR YOU WILL DAMAGE IT. Press enter when you have the recovery img. . .")
+        webbrowser.open("https://twrp.me/Devices/")
         dir_recovery = input("Enter the directory of the .img file TWRP or CWM (REMEMBER THAT THE RECOVERY MUST BE OF YOUR SMARTPHONE MODEL, remember to write the name of recovery.img as well as the directory)")
         subprocess.call(["fastboot.exe", "flash", "recovery", dir_recovery])
         subprocess.call(["fastboot.exe", "reboot"])
@@ -19,6 +21,8 @@ def OS():
         ADB_FB_L()
         print("The phone will restart in bootloader mode")
         subprocess.call(["adb", "reboot", "bootloader"])
+        input("Official webpage for TWRP download, REMEMBER TO SELECT YOUR DEVICE OR YOU WILL DAMAGE IT. Press enter when you have the recovery img. . .")
+        webbrowser.open("https://twrp.me/Devices/")
         dir_recovery = input("Enter the directory of the .img file TWRP or CWM (REMEMBER THAT THE RECOVERY MUST BE OF YOUR SMARTPHONE MODEL, remember to write the name of recovery.img as well as the directory)")
         subprocess.call(["fastboot", "flash", "recovery", dir_recovery])
         subprocess.call(["fastboot", "reboot"])
